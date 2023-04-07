@@ -1,0 +1,43 @@
+#include "main.h"
+
+/**
+ * find_root - Recursively checks whether the square of i is equal to n
+ * @n: The number to find the square root of
+ * @i: The current iteration
+ *
+ * Return: The square root of n, or -1 if n doesn't have a perfect square root
+ */
+int find_root(int n, int i)
+{
+if (i * i == n)
+{
+return i;
+}
+else if (i * i <= n)
+{
+return (find_root(n, i + 1));
+}
+else
+{
+return (-1);
+}
+}
+
+/**
+ * _sqrt_recursion - Returns the square root of a number using recursion
+ * @n: The number to find the square root of
+ * Return: The square root of n, or -1 if n is negative
+ */
+int _sqrt_recursion(int n)
+{
+if (n < 0)
+{
+return (-1);
+}
+else if (n == 0 || n == 1)
+{
+return (n);
+}
+return find_root(n, 2);
+}
+
