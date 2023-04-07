@@ -1,4 +1,4 @@
-#include "main.h"
+i#include "main.h"
 /**
  * _puts_recursion - Prints a string, followed by a newline, using recursion
  * @s: Pointer to the string to print
@@ -7,7 +7,7 @@
 
 void _puts_recursion(char *s)
 {
-if (*s == '\0')
+if (*s)
 {
 _putchar('\n');
 return;
