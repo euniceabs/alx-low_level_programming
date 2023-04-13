@@ -1,0 +1,37 @@
+#include "main.h"
+#include "main.h"
+
+/**
+ * main - adds positive numbers
+ * @argc: the argument count
+ * @argv: the array of argument
+ * Return: 0 if no errors, otherwise
+ */
+int main(int argc, char *argv[])
+{
+int s, p, sum = 0;
+if (argc < 2)
+{
+printf("Usage: %s number1 [number2 ...]\n", argv[0]);
+return (1);
+}
+for (s = 1; s < argc; s++)
+{
+for (p = 0; argv[s][p]; p++)
+{
+if (!isdigit(argv[s][p]))
+{
+printf("Error: '%s' is not a valid number.\n", argv[s]);
+return (1);
+}
+}
+sum += atoi(argv[s]);
+}
+printf("The sum of the numbers is: %d\n", sum);
+return (0);
+}
+
+
+
+
+
