@@ -1,10 +1,10 @@
-#ifndef _HEADER_
-#define _HEADER_
-/**
- * struct op - Struct op
- *
- * @op: The operator
- * @f: The function associated
+#ifndef _CALC_H_
+#define  _CALC_H_
+/**                                                                                      
+ * struct op - Struct op                                                               
+ *                                                                                       
+ * @op: The operator                                                                     
+ * @f: The function associated                                                           
  */
 typedef struct op
 {

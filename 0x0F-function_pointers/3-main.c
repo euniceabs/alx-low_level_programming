@@ -5,7 +5,8 @@
 /**
  * main - the entry point of the program
  * @argc: the number of command-line arguments passed to the program
- * @argv: Array of strings representing the arguments passed to the program
+ * @argv: Array of strings representing
+ * the arguments passed to the program
  * Return: 0 on success, 98 or 99 on error
  */
 int main(int argc, char *argv[])
