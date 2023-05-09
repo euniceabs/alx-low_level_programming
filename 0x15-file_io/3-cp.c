@@ -1,17 +1,13 @@
 #include "main.h"
-
 /**
- *main - program that copies the content
- of a file into another file
+ *main - program that copies the content of a file into another file
  *@argv: input arg
  *@argc: quantity arguments
  *Return: void
  */
-
 int main(int argc, char *argv[])
 {
-int fd, fd_to;
-int check_in, check_out;
+int fd, fd_to, check_in, check_out;
 char buff[1024];
 
 if (argc != 3)
@@ -27,27 +23,21 @@ argv[1]), exit(98);
 }
 fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 if (fd_to == -1)
-{
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
 exit(99);
-}
 check_in = check_out = 1;
 while (check_in)
-{
 check_in = read(fd, buff, 1024);
 if (check_in == -1)
 dprintf(STDERR_FILENO,
 "Error: Can't read from file %s\n", argv[1]),
 exit(98);
 if (check_in > 0)
-{
 check_out = write(fd_to, buff, check_in);
 if (check_out == -1)
 dprintf(STDERR_FILENO,
 "Error: Can't write to %s\n", argv[2]),
 exit(99);
-}
-}
 check_out = close(fd);
 if (check_out == -1)
 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd),
